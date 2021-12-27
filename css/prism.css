@@ -20,7 +20,7 @@
 }
 
 .code-line {
-  @apply block ps-4 pe-4 -mx-4 border-l-4 border-opacity-0;
+  @apply block pl-4 pr-4 -mx-4 border-l-4 border-opacity-0;
 }
 
 .code-line.inserted {
@@ -36,7 +36,7 @@
 }
 
 .line-number::before {
-  @apply inline-block w-4 me-4 -ms-2 text-right text-gray-400;
+  @apply inline-block w-4 mr-4 -ml-2 text-right text-gray-400;
   content: attr(line);
 }
 
