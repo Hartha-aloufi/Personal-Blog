@@ -101,7 +101,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 {tags && (
                   <div className="py-4 xl:py-8">
                     <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
-                      Tags
+                      الوسوم
                     </h2>
                     <div className="flex flex-wrap">
                       {tags.map((tag) => (
@@ -115,7 +115,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                     {prev && (
                       <div>
                         <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
-                          Previous Article
+                          المقال السابق
                         </h2>
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
                           <Link href={`/blog/${prev.slug}`}>{prev.title}</Link>
@@ -137,10 +137,10 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               </div>
               <div className="pt-4 xl:pt-8">
                 <Link
-                  href="/blog"
+                  href="/"
                   className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                 >
-                  &larr; Back to the blog
+                  &rarr; العودة للتدوينات
                 </Link>
               </div>
             </footer>

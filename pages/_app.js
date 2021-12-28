@@ -1,3 +1,4 @@
+import '@/css/base.css'
 import '@/css/tailwind.css'
 import '@/css/prism.css'
 

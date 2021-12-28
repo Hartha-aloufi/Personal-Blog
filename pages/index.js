@@ -9,13 +9,7 @@ import NewsletterForm from '@/components/NewsletterForm'
 
 const MAX_DISPLAY = 5
 
-export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('blog')
-
-  return { props: { posts } }
-}
-
-export default function Home({ posts }) {
+const Home = (props) => {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
@@ -29,17 +23,16 @@ export default function Home({ posts }) {
           </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-          {!posts.length && 'No posts found.'}
-          {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
+          {!props.articles.length && 'No posts found.'}
+          {props.articles.slice(0, MAX_DISPLAY).map((article) => {
             return (
-              <li key={slug} className="py-12">
+              <li key={article.slug} className="py-12">
                 <article>
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
                     <dl>
-                      <dt className="sr-only">Published on</dt>
+                      <dt className="sr-only">نُشرت بتاريخ</dt>
                       <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                        <time dateTime={date}>{formatDate(date)}</time>
+                        <time dateTime={article.date}>{formatDate(article.date)}</time>
                       </dd>
                     </dl>
                     <div className="space-y-5 xl:col-span-3">
@@ -47,29 +40,29 @@ export default function Home({ posts }) {
                         <div>
                           <h2 className="text-2xl font-bold leading-8 tracking-tight">
                             <Link
-                              href={`/blog/${slug}`}
+                              href={`/${article.slug}`}
                               className="text-gray-900 dark:text-gray-100"
                             >
-                              {title}
+                              {article.title}
                             </Link>
                           </h2>
                           <div className="flex flex-wrap">
-                            {tags.map((tag) => (
+                            {article.tags.map((tag) => (
                               <Tag key={tag} text={tag} />
                             ))}
                           </div>
                         </div>
                         <div className="prose text-gray-500 max-w-none dark:text-gray-400">
-                          {summary}
+                          {article.summary}
                         </div>
                       </div>
                       <div className="text-base font-medium leading-6">
                         <Link
-                          href={`/blog/${slug}`}
+                          href={`/${article.slug}`}
                           className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                          aria-label={`Read "${title}"`}
+                          aria-label={`Read "${article.title}"`}
                         >
-                          Read more &rarr;
+                          اقرأ المقال &larr;
                         </Link>
                       </div>
                     </div>
@@ -80,18 +73,18 @@ export default function Home({ posts }) {
           })}
         </ul>
       </div>
-      {posts.length > MAX_DISPLAY && (
+      {props.articles.length > MAX_DISPLAY && (
         <div className="flex justify-end text-base font-medium leading-6">
           <Link
-            href="/blog"
+            href=""
             className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
             aria-label="all posts"
           >
-            جميع المقالات &rarr;
+            جميع المقالات &larr;
           </Link>
         </div>
       )}
-      {siteMetadata.newsletter.provider !== '' && (
+      {!!siteMetadata.newsletter?.provider && (
         <div className="flex items-center justify-center pt-4">
           <NewsletterForm />
         </div>
@@ -99,3 +92,11 @@ export default function Home({ posts }) {
     </>
   )
 }
+
+export async function getStaticProps() {
+  const articles = await getAllFilesFrontMatter('blog')
+
+  return { props: { articles } }
+}
+
+export default Home

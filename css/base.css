@@ -1,0 +1,9 @@
+html {
+  scroll-behavior: smooth;
+  /* increase base font size to 18px */
+  font-size: 112.5%; 
+}
+
+body {
+  word-spacing: .125rem;
+}
