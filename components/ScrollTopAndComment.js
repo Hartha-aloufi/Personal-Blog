@@ -22,7 +22,7 @@ const ScrollTopAndComment = () => {
     document.getElementById('comment').scrollIntoView()
   }
   return (
-    <div className="fixed flex-col hidden gap-3 end-8 bottom-8 md:flex">
+    <div className="fixed flex-col hidden gap-3 end-8 start-0 bottom-8 md:flex">
       <button
         aria-label="Scroll To Comment"
         type="button"

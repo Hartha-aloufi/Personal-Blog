@@ -15,3 +15,20 @@ input:-webkit-autofill,
 input:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
 }
+
+/* override tailwindcss-rtl start-[X] and end-[X] since they are buggy */
+body[dir="rtl"] .end-8{
+  left: 2rem
+}
+
+body:not([dir="rtl"]) .end-8{
+  right: 2rem;
+}
+
+body[dir="rtl"] .start-0{
+  right: unset !important; 
+}
+
+body:not([dir="rtl"]) .start-0{
+  left: unset !important;
+}
