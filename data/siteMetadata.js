@@ -1,10 +1,10 @@
 const siteMetadata = {
-  title: 'حارثة العوفي - مدونة مطور',
+  title: 'الزاوية',
   author: 'حارثة العوفي',
-  headerTitle: 'حارثة العوفي',
+  headerTitle: 'مدونة الزاوية',
   description: 'أُشارك ما خبرت وما أتعلم بلغتي الأُم',
   language: 'ar-EG',
-  theme: 'dark', // system, dark or light
+  theme: 'light', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
   siteRepo: 'https://github.com/Hartha-aloufi/Personal-Blog',
   siteLogo: '/static/images/logo.png',

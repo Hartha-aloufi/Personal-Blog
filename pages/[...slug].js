@@ -6,7 +6,6 @@ import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/l
 
 const DEFAULT_LAYOUT = 'PostLayout'
 
-
 export default function Blog({ post, authorDetails, prev, next }) {
   const { mdxSource, toc, frontMatter } = post
 
