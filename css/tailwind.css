@@ -32,3 +32,9 @@ body[dir="rtl"] .start-0{
 body:not([dir="rtl"]) .start-0{
   left: unset !important;
 }
+
+/* override lists paddings */
+.prose :where(ol):not(:where([class~="not-prose"] *)) {
+    padding-left: 0;
+    padding-right: 1.25rem;
+}

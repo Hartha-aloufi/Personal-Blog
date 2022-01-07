@@ -4,7 +4,7 @@ const siteMetadata = {
   headerTitle: 'مدونة الزاوية',
   description: 'أُشارك ما خبرت وما أتعلم بلغتي الأُم',
   language: 'ar-EG',
-  theme: 'light', // system, dark or light
+  theme: 'system', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
   siteRepo: 'https://github.com/Hartha-aloufi/Personal-Blog',
   siteLogo: '/static/images/logo.png',

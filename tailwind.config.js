@@ -19,8 +19,8 @@ module.exports = {
         sans: ['Inter', "'Baloo Bhaijaan 2'", 'cursive', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: colors.teal,
-        gray: colors.neutral,
+        primary: colors.emerald,
+        gray: colors.zinc,
       },
       typography: (theme) => ({
         DEFAULT: {
