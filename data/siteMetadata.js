@@ -1,8 +1,9 @@
 const siteMetadata = {
-  title: 'الزاوية',
+  title: 'نزعة التقنية',
   author: 'حارثة العوفي',
-  headerTitle: 'مدونة الزاوية',
-  description: 'أُشارك ما خبرت وما أتعلم بلغتي الأُم',
+  headerTitle: 'نزعة التقنية',
+  description:
+    'حللتَ اهلاً ووطِئت سهلاً, أنا حارثة العوفي وهذه نزعتي التقنيَّة, أُشارك من خلالها ما خَبرتُ وما أتعلم بإذن اللّه وبلُغتي العربية.',
   language: 'ar-EG',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',

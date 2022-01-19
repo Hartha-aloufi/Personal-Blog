@@ -1,6 +1,6 @@
 ---
 name: حارثة العوفي
-avatar: /static/images/hartha.jpg
+avatar: /static/images/hartha.png
 occupation: مطور واجهات ويب
 company: Kait Solutions
 email: Hartha.aloufi@gmail.com.com
