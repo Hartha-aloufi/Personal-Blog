@@ -7,6 +7,7 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import CustomLink from '@/components/Link'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/main/data/blog/${fileName}`
 
@@ -53,17 +54,21 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   {authorDetails.map((author) => (
                     <li className="flex items-center space-s-2" key={author.name}>
                       {author.avatar && (
-                        <Image
-                          src={author.avatar}
-                          width="38px"
-                          height="38px"
-                          alt="avatar"
-                          className="w-10 h-10 rounded-full"
-                        />
+                        <CustomLink href="/about">
+                          <Image
+                            src={author.avatar}
+                            width="38px"
+                            height="38px"
+                            alt="avatar"
+                            className="w-10 h-10 rounded-full"
+                          />
+                        </CustomLink>
                       )}
                       <dl className="text-sm font-medium leading-5 whitespace-nowrap">
                         <dt className="sr-only">الاسم</dt>
-                        <dd className="text-gray-900 dark:text-gray-100">{author.name}</dd>
+                        <dd className="text-gray-900 dark:text-gray-100">
+                          <CustomLink href="/about">{author.name}</CustomLink>
+                        </dd>
                         <dt className="sr-only">تويتر</dt>
                         <dd>
                           {author.twitter && (
