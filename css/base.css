@@ -7,3 +7,7 @@ html {
 body {
   word-spacing: .125rem;
 }
+
+a {
+  text-decoration: none !important; 
+}
