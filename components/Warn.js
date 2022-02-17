@@ -9,7 +9,7 @@ const Warn = (props) => {
                  font-bold text-orange-500 dark:text-gray-100 px-4 pt-4 pb-1 text-sm mt-40"
       role="alert"
     >
-      <span className="text-orange-600 text-lg">تنويه</span>
+      <span className="text-orange-600 dark:text-gray-100 text-lg">تنويه</span>
       {props.children}
     </div>
   )

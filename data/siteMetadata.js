@@ -67,6 +67,10 @@ const siteMetadata = {
       shortname: process.env.NEXT_PUBLIC_DISQUS_SHORTNAME,
     },
   },
+  componentReplaceConfig: {
+    rgx: [/\(.*\) --> [a-zA-Z_$0-9.]*/g],
+    componentName: 'Term',
+  },
 }
 
 module.exports = siteMetadata

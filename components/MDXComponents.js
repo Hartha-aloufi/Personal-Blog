@@ -13,7 +13,7 @@ export const MDXComponents = {
   Image,
   TOCInline,
   Warn,
-  Tooltip,
+  Term: Tooltip,
   a: CustomLink,
   pre: Pre,
   BlogNewsletterForm: BlogNewsletterForm,
