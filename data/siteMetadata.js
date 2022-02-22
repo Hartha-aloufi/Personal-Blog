@@ -68,7 +68,6 @@ const siteMetadata = {
     },
   },
   componentReplaceConfig: {
-    rgx: [/\(.*\) --> [a-zA-Z_$0-9.]*/g],
     componentName: 'Term',
   },
 }
